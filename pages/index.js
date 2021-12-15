@@ -31,7 +31,7 @@ export default function Homepage({ data }) {
               Creativity is nothing but the way to solve new problems.
             </Typography.Heading>
           </div>
-          <div className="space-x-5 flex mt-10 md:py-3 md:pb-8 md:px-5 overflow-x-scroll w-auto">
+          <div className="space-x-5 flex mt-10 md:py-3 md:pb-8 md:px-5 md:overflow-x-scroll w-auto">
             {[
               Array(4)
                 .fill("")
