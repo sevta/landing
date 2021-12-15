@@ -9,18 +9,19 @@ export default function Button({
   variant,
   color = "primary",
   children,
+  ...rest
 }) {
   const _className = classNames(
     "px-6 rounded-lg py-3 capitalize font-medium",
     "focus:ring active:scale-90 transition duration-150",
     {
-      "bg-main-indigo-600  text-white": color === "primary",
-      "bg-main-indigo-100  text-main-indigo-600": color === "secondary",
+      "bg-main-cyan-600  text-white": color === "primary",
+      "bg-main-cyan-100  text-main-cyan-600": color === "secondary",
       "bg-main-pink-500 text-white focus:ring focus:ring-main-pink-200":
         color === "tertiary",
     },
     {
-      "text-main-indigo-500 !bg-transparent focus:ring-0":
+      "text-main-cyan-600 !bg-transparent focus:ring-0":
         variant === "ghost" && color === "primary",
       "text-main-pink-500 !bg-transparent focus:ring-0":
         variant === "ghost" && color === "tertiary",
@@ -32,7 +33,7 @@ export default function Button({
       case as === "link":
         return (
           <Link href={href} passHref>
-            <button className={_className}>
+            <button className={_className} {...rest}>
               <ButtonInner leftIcon={leftIcon} rightIcon={rightIcon}>
                 {children}
               </ButtonInner>
@@ -42,7 +43,7 @@ export default function Button({
 
       case as === "a":
         return (
-          <a className={_className}>
+          <a className={_className} {...rest}>
             <ButtonInner leftIcon={leftIcon} rightIcon={rightIcon}>
               {children}
             </ButtonInner>
@@ -50,7 +51,7 @@ export default function Button({
         );
       case as === "div":
         return (
-          <div className={_className}>
+          <div className={_className} {...rest}>
             <ButtonInner leftIcon={leftIcon} rightIcon={rightIcon}>
               {children}
             </ButtonInner>
@@ -58,7 +59,7 @@ export default function Button({
         );
       default:
         return (
-          <button className={_className}>
+          <button className={_className} {...rest}>
             <ButtonInner leftIcon={leftIcon} rightIcon={rightIcon}>
               {children}
             </ButtonInner>

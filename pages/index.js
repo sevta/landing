@@ -55,11 +55,11 @@ export default function Homepage({ data }) {
           </div>
         </div>
       </section>
-      <section className="p-10 w-full pt-28 pb-40 relative bg-white/80">
+      <section className="p-10 w-full pt-28 pb-40 relative bg-white/80 dark:bg-slate-900/80">
         <Ornament />
         <Team />
       </section>
-      <section className="w-full pb-20">
+      <section className="w-full pb-20 bg-white dark:bg-black">
         <Contact />
       </section>
     </Layout>

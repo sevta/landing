@@ -20,7 +20,7 @@ export default function Contact() {
                 </Typography.Heading>
                 <Typography.Heading
                   type="h2"
-                  className="!text-main-grayscale-900/40 mt-4"
+                  className="text-main-grayscale-900/40 dark:text-white/50 mt-4"
                 >
                   info@email.com
                 </Typography.Heading>
@@ -38,7 +38,7 @@ export default function Contact() {
               </Typography.Body>
               <Typography.Body
                 size="sm"
-                className="text-main-grayscale-900/50 mt-7"
+                className="text-main-grayscale-900/50 dark:text-white mt-7"
               >
                 1901 Thornridge Cir. Shiloh, Hawaii 81063
               </Typography.Body>

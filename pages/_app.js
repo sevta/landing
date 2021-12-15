@@ -12,8 +12,22 @@ import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/inter/900.css";
 
+import { useEffect, useState } from "react";
+import Script from "next/script";
+
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    setDarkMode(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  return (
+    <>
+      <Component {...pageProps} />
+      <Script strategy="beforeInteractive" src="/scripts/darkMode.js" />
+    </>
+  );
 }
 
 export default MyApp;
