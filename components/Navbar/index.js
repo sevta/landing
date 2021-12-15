@@ -16,7 +16,7 @@ export default function Navbar() {
           </span>
         </Button>
 
-        <div className="flex items-center justify-center space-x-3">
+        <div className="flex items-center justify-center space-x-8 md:space-x-3">
           <NavLink href="/">Products</NavLink>
           <NavLink href="/">Features</NavLink>
           <NavLink href="/">Contact</NavLink>
