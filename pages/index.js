@@ -22,7 +22,9 @@ export default function Homepage({ data }) {
         title={data.homepages[0].title}
         subtitle={data.homepages[0].subtitle}
       />
-      <section className="w-full p-10 pt-0">
+      <section className="w-full px-10 pb-12 pt-0 relative">
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-slate-100 to-white/80 dark:from-black dark:to-slate-900/80"></div>
+
         <div className="max-w-[1280px] mx-auto px-16 py-20">
           <div className="w-3/6">
             <Typography.Overline>why resep</Typography.Overline>

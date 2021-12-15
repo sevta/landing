@@ -20,7 +20,7 @@ export default function Contact() {
                 </Typography.Heading>
                 <Typography.Heading
                   type="h2"
-                  className="text-main-grayscale-900/40 dark:text-white/50 mt-4"
+                  className="!text-main-grayscale-900/40 dark:!text-white/50 mt-4"
                 >
                   info@email.com
                 </Typography.Heading>
