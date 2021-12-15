@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed z-50 top-0 left-0 w-full bg-[#FFF4E6] !bg-transparent">
-      <div className="flex items-center justify-between py-5 container">
+      <div className="flex items-center justify-between py-5 container md:flex-col md:items-start md:justify-start">
         <Button as="link" variant="ghost" className="p-0">
           <span className="text-2xl font-bold capitalize text-black underline decoration-main-cyan-500 dark:text-white">
             resep.
@@ -33,7 +33,7 @@ export default function Navbar() {
 
 function NavLink({ href, children }) {
   return (
-    <Button as="link" href={href} variant="ghost">
+    <Button as="link" href={href} variant="ghost" className="md:px-0">
       <Typography.Body className="cursor-pointer" size="sm">
         {children}
       </Typography.Body>

@@ -10,7 +10,7 @@ import Button from "../Button";
 export default function Footer() {
   return (
     <footer className="py-10 bg-white dark:bg-black">
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between md:flex-col md:justify-center md:space-y-5">
         <Typography.Body size="sm">
           © 2021 Resep, Inc. All rights reserved
         </Typography.Body>

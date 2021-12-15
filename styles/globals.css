@@ -4,6 +4,6 @@
 
 @layer components {
   .container {
-    @apply max-w-[1280px] px-16 mx-auto relative;
+    @apply max-w-[1280px] px-16 mx-auto relative md:px-5;
   }
 }

@@ -1,14 +1,19 @@
 import Avatar from "../Avatar";
 import Typography from "../Typography";
+import useResponsive from "../../hooks/useResponsive";
 
 export default function Team() {
+  const { md } = useResponsive();
+
   return (
     <div className="flex items-center justify-center flex-col">
       <div className="text-center">
         <Typography.Overline>our team</Typography.Overline>
-        <Typography.Heading type="h2">Meet the team</Typography.Heading>
+        <Typography.Heading type={md ? "h3" : "h2"}>
+          Meet the team
+        </Typography.Heading>
       </div>
-      <div className="flex items-center justify-between space-x-16 mt-14 w-[800px]">
+      <div className="flex items-center md:flex-col md:justify-center md:space-x-0 md:space-y-8 justify-between space-x-16 mt-14 w-[800px]">
         <div className="flex flex-col items-center justify-center space-y-4">
           <Avatar src="https://images.unsplash.com/photo-1639501344771-1444e9badf54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" />
           <div className="text-center">

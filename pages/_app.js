@@ -23,10 +23,10 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <div className="md:overflow-x-hidden">
       <Component {...pageProps} />
       <Script strategy="beforeInteractive" src="/scripts/darkMode.js" />
-    </>
+    </div>
   );
 }
 

@@ -10,11 +10,10 @@ import Ornament from "components/Ornament";
 import { client } from "../lib/graphql";
 import { gql } from "graphql-request";
 import { useEffect } from "react";
+import useResponsive from "../hooks/useResponsive";
 
 export default function Homepage({ data }) {
-  useEffect(() => {
-    console.log("data", data);
-  }, [data]);
+  const { md } = useResponsive();
 
   return (
     <Layout>
@@ -22,22 +21,26 @@ export default function Homepage({ data }) {
         title={data.homepages[0].title}
         subtitle={data.homepages[0].subtitle}
       />
-      <section className="w-full pb-12 pt-0 relative">
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-slate-100 to-white/80 dark:from-black dark:to-slate-900/80"></div>
+      <section className="w-full pb-12 pt-0 relative dark:bg-black">
+        <div className="absolute bottom-0 md:bottom-unset md:top-[-130px] left-0 w-full h-32 bg-gradient-to-b from-slate-100 to-white/80 dark:from-black dark:to-slate-900/80"></div>
 
-        <div className="container py-20">
-          <div className="w-3/6">
+        <div className="container py-20 md:py-6">
+          <div className="w-3/6 md:w-full">
             <Typography.Overline>why resep</Typography.Overline>
-            <Typography.Heading type="h3">
+            <Typography.Heading type={md ? "h4" : "h3"}>
               Creativity is nothing but the way to solve new problems.
             </Typography.Heading>
           </div>
-          <div className="space-x-5 flex mt-10">
+          <div className="space-x-5 flex mt-10 md:py-3 md:pb-8 md:px-5 overflow-x-scroll w-auto">
             {[
               Array(4)
                 .fill("")
                 .map((_, index) => (
-                  <Card type="shadow" key={index}>
+                  <Card
+                    type="shadow"
+                    key={index}
+                    className="md:w-[260px] md:flex-shrink-0"
+                  >
                     <div>
                       <img src="/images/featured-ico-1.png" alt="" />
                     </div>
@@ -57,7 +60,7 @@ export default function Homepage({ data }) {
           </div>
         </div>
       </section>
-      <section className="p-10 w-full pt-28 pb-40 relative bg-white/80 dark:bg-slate-900/80">
+      <section className="p-10 w-full pt-28 md:pt-5 pb-40 md:pb-20 relative bg-white/80 dark:bg-slate-900/80">
         <Ornament />
         <Team />
       </section>
