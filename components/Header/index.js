@@ -12,8 +12,8 @@ export default function Header({ title, subtitle }) {
         <Typography.Body size="lg" className="text-center">
           {subtitle}
         </Typography.Body>
-        <div className="flex items-center justify-center space-y-3 flex-col">
-          <Button color="primary">Purchase for $58</Button>
+        <div className="flex items-center justify-center space-x-3">
+          <Button color="primary">Explore</Button>
           <Button variant="ghost" color="primary">
             See more
           </Button>
