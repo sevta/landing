@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <div className="fixed z-50 top-0 left-0 w-full bg-[#FFF4E6] !bg-transparent">
       <div className="flex items-center justify-between py-5 container">
-        <Button as="link" variant="ghost">
+        <Button as="link" variant="ghost" className="p-0">
           <span className="text-2xl font-bold capitalize text-black underline decoration-main-cyan-500 dark:text-white">
             resep.
           </span>
