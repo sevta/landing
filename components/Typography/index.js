@@ -53,7 +53,7 @@ Typography.Heading = ({ className, children, type = "h1" }) => (
 Typography.Overline = ({ className, children, size = "lg" }) => (
   <div
     className={classNames(
-      " text-main-cyan-500 tracking-[0.8px] font-semibold uppercase dark:text-main-cyan-300",
+      " text-main-cyan-600 tracking-[0.8px] font-semibold uppercase dark:text-main-cyan-300",
       size === "lg" && "text-[14px] leading-[170%]",
       size === "sm" && "text-[12px] leading-[170%]",
 

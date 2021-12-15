@@ -15,7 +15,8 @@ export default function Button({
     "px-6 rounded-lg py-3 capitalize font-medium",
     "focus:ring active:scale-90 transition duration-150",
     {
-      "bg-main-cyan-600  text-white": color === "primary",
+      "bg-main-cyan-600  text-white focus:ring focus:ring-cyan-500/30":
+        color === "primary",
       "bg-main-cyan-100  text-main-cyan-600": color === "secondary",
       "bg-main-pink-500 text-white focus:ring focus:ring-main-pink-200":
         color === "tertiary",
